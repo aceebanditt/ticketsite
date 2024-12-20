@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #800020;
+  --primary-dark: #4A0012;
+  --secondary: #f43e3e;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-gray-700 hover:text-[--primary] transition-colors font-medium;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-[--primary] to-[--primary-dark] 
+           text-white font-medium px-6 py-3 rounded-full
+           hover:shadow-lg transform hover:-translate-y-0.5 
+           transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+}
